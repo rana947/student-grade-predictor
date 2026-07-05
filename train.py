@@ -5,7 +5,7 @@ from sklearn.metrics import accuracy_score
 import pickle
 
 # CSV Direct path - apna username check karo
-df = pd.read_csv(r'C:\Users\FLH\New folder\studentgradepredictor\students.csv')
+df = pd.read_csv('students.csv')
 print("✅ Data loaded!\n", df)
 
 # Features aur Label
@@ -25,7 +25,7 @@ pred = model.predict(X_test)
 print("Accuracy:", accuracy_score(y_test, pred))
 
 # Model Save - same folder mein
-with open(r'C:\Users\FLH\New folder\studentgradepredictor\grade_model.pkl', 'wb') as f:
+with open('grade_model.pkl', 'wb') as f:
     pickle.dump(model, f)
 
 print("✅ Model saved successfully! Project complete!")
